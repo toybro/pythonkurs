@@ -15,5 +15,5 @@ z, x, y = lista_1[0], lista_1[1], lista_1[2]
 print("z:", z, "x: ", x, "y: ", y)
 z, x, y = lista_1[:3]
 print(f"z: {z}\nx: {x}\ny: {y}\nz")
-z, x = x, z
-print(z, x)
+z, x = x, z # z to x a x to z
+print(f"z: {z}\nx: {x}")
