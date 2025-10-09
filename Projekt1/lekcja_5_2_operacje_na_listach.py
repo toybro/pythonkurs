@@ -17,3 +17,4 @@ for _ in pierwsza_lista:
     indeks += 1 #Indeks zwiększa się o 1
 
 print("Wartość 3 listy po modyfikacji:", trzecia_lista)
+

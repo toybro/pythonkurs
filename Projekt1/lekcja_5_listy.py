@@ -26,7 +26,7 @@ print("\nIlośc elementów w liście:", len(lista))#Zwraca ilość elementów w 
 
 print("Ile jest liter w słowie Python:",len("Python"))#Ilość liter w słowie python
 
-print("Python", "Kolejny" + "tekst", sep="++", end="||")#Wymienia spacje na dwa plusy i zaczyna NASTĘPNEGO printa w tej samej linii
+print("Python", "Kolejny" + "tekst", sep="++", end="||")#Wymienia spacje na dwa plusy i zaczyna NASTĘPNEGO printa w tej samej linii dodając ||
 print("Kolejny print")
 print("Nowy", "tekst", sep="\n"*3)#Separator między słowami dodaje 2 nowe linie gdyż pierwsza linia zaczyna się w słowie NOWY
 

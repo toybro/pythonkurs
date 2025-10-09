@@ -4,7 +4,7 @@ print(licznik + 1)
 print(licznik)
 licznik = licznik + 1 #licznik += 1
 print(licznik)
-
+ 
 
 licznik = 0
 while licznik < 5:
