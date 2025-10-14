@@ -16,4 +16,4 @@ print("Tekst {} {} {} informacje dalsze".format("elementy", 1, 2))
 print("Tekst {b} {c} {a} informacje dalsze".format(a="elementy", b=1, c=2)) #nazywanie elementów
 print("Tekst {2} {1} {0} informacje dalsze".format("elementy", 1, 2)) #numerowanie elementów
 print(" {} {} {} {} {} {} ".format(*lista)) #Wypisuje w princie elementy z listy
-
+print(f"Długość lista to {len(lista)}")
