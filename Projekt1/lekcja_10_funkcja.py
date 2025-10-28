@@ -50,4 +50,3 @@ def odejmowanie_2_liczb(liczbau1, liczbau2):
 
 odejmowanie_2_liczb(liczbau1_odejm, liczbau2_odejm)
 
-
