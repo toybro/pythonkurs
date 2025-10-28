@@ -1,8 +1,8 @@
 print("Obliczanie BMI")
 
-def oblicz_bmi(waga, wzrost):
+def oblicz_bmi(waga, wzrost, imie):
     bmi = waga / (wzrost ** 2)
-    print(f"Twoje BMI wynosi: {bmi:.2f}")
+    print(f"Twoje BMI {imie} wynosi: {bmi:.2f}")
     if bmi < 18.5:
         print("Masz niedowagę.")
     elif bmi < 25:
@@ -15,6 +15,6 @@ def oblicz_bmi(waga, wzrost):
 
 waga = float(input("Podaj wagę w kilogramach: "))
 wzrost = float(input("Podaj wzrost w metrach: "))
-
-oblicz_bmi(waga, wzrost)
+imie = input("Podaj swoje imie: ")
+oblicz_bmi(waga, wzrost, imie)
 
