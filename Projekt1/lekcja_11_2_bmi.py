@@ -17,4 +17,3 @@ waga = float(input("Podaj wagę w kilogramach: "))
 wzrost = float(input("Podaj wzrost w metrach: "))
 imie = input("Podaj swoje imie: ")
 oblicz_bmi(waga, wzrost, imie)
-
