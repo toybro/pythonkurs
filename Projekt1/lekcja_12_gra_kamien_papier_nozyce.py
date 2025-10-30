@@ -11,7 +11,7 @@ print("2 - papier")
 print("3 - nożyce\n")
 
 
-wybor = input("Wpisz numer (1, 2 lub 3): ")
+wybor = input("Wpisz numer 1, 2, 3: ")
 
 
 if wybor in ["1", "2", "3"]:
