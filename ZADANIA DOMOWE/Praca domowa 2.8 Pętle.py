@@ -1,93 +1,50 @@
-def print_star_number(n):
-    digits = {
-        '0': [" *** ",
-              "*   *",
-              "*   *",
-              "*   *",
-              " *** "],
-        '1': ["  *  ",
-              " **  ",
-              "  *  ",
-              "  *  ",
-              " *** "],
-        '2': [" *** ",
-              "*   *",
-              "   * ",
-              "  *  ",
-              "*****"],
-        '3': [" *** ",
-              "    *",
-              " *** ",
-              "    *",
-              " *** "],
-        '4': ["   * ",
-              "  ** ",
-              " * * ",
-              "*****",
-              "   * "],
-        '5': ["*****",
-              "*    ",
-              "**** ",
-              "    *",
-              "**** "],
-        '6': [" *** ",
-              "*    ",
-              "**** ",
-              "*   *",
-              " *** "],
-        '7': ["*****",
-              "    *",
-              "   * ",
-              "  *  ",
-              " *   "],
-        '8': [" *** ",
-              "*   *",
-              " *** ",
-              "*   *",
-              " *** "],
-        '9': [" *** ",
-              "*   *",
-              " ****",
-              "    *",
-              " *** "]
+def pokaz_menu():
+    print("\n=== MENU GWIAZDEK ===")
+    print("a. Wzór A")
+    print("b. Wzór B")
+    print("c. Wzór C")
+    print("d. Wzór D")
+    print("e. Wzór E")
+    print("f. Wzór F")
+    print("g. Wzór G")
+    print("h. Wzór H")
+    print("i. Wzór I")
+    print("j. Wzór J")
+    print("q. Zakończ program")
+
+def pokaz_wzor(litera):
+    wzory = {
+        "a": ["***", " **", "  *"],
+        "b": ["*  ", "** ", "***"],
+        "c": ["***", " * ", "   "],
+        "d": ["***", " * ", "***"],
+        "e": ["***", " * ", "***"],
+        "f": ["* *", "***", "* *"],
+        "g": ["*  ", "** ", "*  "],
+        "h": ["  *", " **", "  *"],
+        "i": ["***", "** ", "*  "],
+        "j": ["  *", " **", "***"]
     }
 
-    for row in range(5):
-        line = ""
-        for digit in str(n):
-            line += digits.get(digit, "     ")[row] + "  "
-        print(line)
+    wzor = wzory.get(litera)
+    if wzor:
+        print(f"\nWybrano wzór {litera.upper()}:\n")
+        for linia in wzor:
+            print(linia)
+    else:
+        print("Nieznany wzór.")
 
-def menu():
-    tile_map = {
-        'a': 0,
-        'b': 1,
-        'c': 2,
-        'd': 3,
-        'e': 4,
-        'f': 5,
-        'g': 6,
-        'h': 7,
-        'i': 8,
-        'j': 9
-    }
-
+def uruchom_program():
     while True:
-        print("\n🧩 MENU KAFELKÓW:")
-        for key in tile_map:
-            print(f"{key.upper()} - Wzór odpowiadający cyfrze {tile_map[key]}")
-        print("X - Zakończ")
+        pokaz_menu()
+        wybor = input("Wybierz wzór (a–j) lub 'q' aby zakończyć: ").lower()
 
-        choice = input("Wybierz literę (A–J) lub X by zakończyć: ").lower()
-
-        if choice == 'x':
-            print("👋 Do zobaczenia!")
+        if wybor == "q":
+            print("Do zobaczenia!")
             break
-        elif choice in tile_map:
-            number = tile_map[choice]
-            print(f"\n🔢 Cyfra {number} w gwiazdkach:")
-            print_star_number(number)
+        elif wybor in "abcdefghij":
+            pokaz_wzor(wybor)
         else:
-            print("⚠️ Nieprawidłowy wybór. Spróbuj ponownie.")
+            print("Nieprawidłowy wybór. Spróbuj ponownie.")
 
-menu()
+uruchom_program()
