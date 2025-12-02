@@ -1,16 +1,20 @@
-def czy_palindrom(napis):
-    odwrocony = ""
-    for znak in napis:
-        odwrocony = znak + odwrocony
+"""
+Stwórz funkcję, która sprawdzi, czy podany jako argument napis jest palindromem
+(tj. czytany od przodu i wspak jest dokładnie taki sam, np. „kajak”, „Madam”).
+"""
 
-    if napis == odwrocony:
-        return True
-    else:
-        return False
+def palindrom(slowo):
+    if slowo == slowo[::-1]:
+        print(f"Slowo {slowo} jest palindromem")
 
-tekst = input("Podaj słowo: ")
 
-if czy_palindrom(tekst):
-    print("palindrom")
-else:
-    print("nie palindrom")
+palindrom("kajak")
+
+def palindrom(slowo):
+        print(f"Slowo {slowo} jest palindromem: {slowo == slowo[::-1]}")
+
+
+palindrom("taczka")
+
+def if_palindrom(text):
+    text = "Hello!!!   world??   Python!"

@@ -1,25 +1,55 @@
-def pozycja_najmniejszej(lista):
-    if len(lista) == 0:
-        return None
+"""
+Stwórzcie funckje Przyjmującą listę liczb całkowitych,a zwracającą informację,
+na której pozycji znajduje się najmniejsz liczba.
 
-    najmniejsza = lista[0]
-    pozycja = 0
+Przykład:
 
-    for i in range(1, len(lista)):
-        if lista[i] < najmniejsza:
-            najmniejsza = lista[i]
-            pozycja = i
-
-    return pozycja
+Dla listy [42, 13, 56, 7, 12, 3, 85] funkcja ma zwrócić 5 ponieważ pod
+tym indeksem w tej liście znajduje się element najmniejszy
+"""
 
 
-tekst = input("Liczbyt podzielone przecinkami: ")
-elementy = tekst.split(",")
-lista_liczb = []
+# def najmniejszy_index(wprowadzona_lista):
+#     najmnejszy = min(wprowadzona_lista)
+#     return wprowadzona_lista.index(najmnejszy)
+#
+# lista_usera = []
+# ile_liczb_w_liscie = int(input("Wpisz ile liczb ma posiadać liczba: "))
+# for i in range(ile_liczb_w_liscie):
+#     liczba = int(input(f"Wprowadź {i + 1} liczbę: "))
+#     lista_usera.append(int(liczba))
+# print(f"Indeks dla najmniejszej liczby w liscie: {najmniejszy_index(lista_usera)}")
 
-for e in elementy:
-    lista_liczb.append(int(e.strip()))
+
+# def liczby(lista_liczb):
+#     szukana = (min(lista_liczb))
+#     wynik = 0
+#
+#     for i in lista_liczb:
+#         if i != szukana:
+#             wynik += 1
+#     print(wynik - 1)
+# lista_liczb = [42, 13, 56, 7, 12, 3, 85]
+#
+# liczby(lista_liczb)
 
 
-wynik = pozycja_najmniejszej(lista_liczb)
-print("Pozycja w lisxie najmniejszej liczby:", wynik)
+def list_analys(*args):
+    # lista = []
+    min_pos = None
+    min_val = None
+    for ind, arg in enumerate(args):
+        arg_int = int(arg)
+        # lista.append(arg)
+        if min_val == None:
+            min_pos = ind
+            min_val = arg_int
+
+        elif arg_int < min_val:
+            min_pos = ind
+            min_val = arg_int
+    print("Najmniejsza pozycja jest w: ", min_pos, " ma wartosc: ", min_val)
+
+
+if __name__ == '__main__':
+    list_analys(42, 13, 56, 7, 12, 3, 85)
